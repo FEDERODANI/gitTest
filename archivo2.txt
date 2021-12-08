@@ -1,45 +1,5 @@
-{% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-
-</head>
-<body>
-
-	<img src="{% static 'img/logo.png' %}" class="image-menu">
+Adios hasta nunca mundo cruel
+nos vemos en Disney...
 
 
-	<div class="menu"> 
-
-		<p>ACA VA A IR EL MENU</p>
-		<br>
-
-		{% if user.is_authenticated %}
-			<span>WELCOME {{ user.username }}</span>
-			<a href="{% url 'logout' %}">CERRAR SESION </a>
-		{% else %}
-			<a href="{% url 'login' %}">LOGIN</a>
-			<a href="">REGISTRO</a>
-
-		{% endif %}
-
-
-	</div>
-
-
-	{% block contenido %}
-
-
- 
-	{% endblock contenido %}
-
-
-</body>
-
-</html>
-Adios mundo cruel
-1
